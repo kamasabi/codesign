@@ -1,0 +1,2 @@
+# codesign
+Automatic MacOS codesigner
