@@ -82,7 +82,7 @@ if echo "$answer" | grep -iq "^y" ;then
     echo After completing all these steps the plugins should run fine.
     echo "$STR" 
     sleep 1
-    echo Feel free to donate me a coffee @ kamasabi.de
+    echo Feel free to visit me @ kamasabi.de
     echo "$STR" 
     sleep 5
 
