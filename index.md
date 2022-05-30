@@ -1,37 +1,52 @@
-## Welcome to GitHub Pages
+#codesign
+##Automatic MacOS codesigner
+###This Software will help you to use unsigned / untrusted Software / Plugins within your DAW of choice.
 
-You can use the [editor on GitHub](https://github.com/kamasabi/codesign/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+#What it does
+My Codesigner goes through your user-folder and everything in it in order to sign your .component, .app, .vst, .vst3, .au & .bundle files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+This might help you to run unsigned plugins / VSTs within your Digital Audio Workstation(s).
 
-### Markdown
+#How to run it
+Download the .sh file and open up your Terminal. Type "sh " in your terminal and then drag the downloaded file onto the terminal window and press enter.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+#What if this does not help / work?
+These are the additional steps I recommend if this program does not solve your issue:
 
-```markdown
-Syntax highlighted code block
+###Step 1:
 
-# Header 1
-## Header 2
-### Header 3
+1. Open terminal
+2. Type: xattr
+3. Press spacebar and drag your to-be-signed file into the terminal window
+4. Your command should look like this: xattr path/to/file/filename.file
+5. Press enter
+6. Type: chmod -R 755
+7. Press spacebar and drag your to-be-signed file into the terminal window
+8. Your command should look like this: chmod -R 755 path/to/file/filename.file
+9. Press enter
 
-- Bulleted
-- List
+Step 2:
 
-1. Numbered
-2. List
+Sometimes, when your DAW / System tries to open a new plugin and/or new software, MacOS might try to block it.
 
-**Bold** and _Italic_ and `Code` text
+In this case, please follow these steps:
 
-[Link](url) and ![Image](src)
-```
+1. Open up a terminal
+2. Enter the following code: sudo spctl --master-disable
+3. Press enter
+4. Authenticate and hit return
+5. Press the Apple Icon on the topf left
+6. Click on: System Preferences
+7. Go to: Security and Privacy
+8. Go to: General
+9. Tap the lock at the bottom left
+10. Enter your password
+11. Choose: Anywhere under Allow apps dowloaded from unknown ressources
+12. Click the lock icon again
+13. Try to load / start your plugin again
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+After completing all these steps the plugins should run fine.
 
-### Jekyll Themes
+If you followed every step and still encounter issues, your installation might be broken or there might be a bug.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kamasabi/codesign/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Thank you for using my little snippet :)
